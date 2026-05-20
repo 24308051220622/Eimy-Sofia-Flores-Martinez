@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problema 19</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(to bottom right, #2B124C, #522B5B, #854F6C);
+margin:0;
+overflow:hidden;
+}
+
+.navbar{
+width:100%;
+background: rgba(0,0,0,0.25);
+backdrop-filter: blur(10px);
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+padding:15px 5px;
+box-sizing:border-box;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+padding:10px 12px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.navbar a:hover{
+background-color: rgba(255,255,255,0.15);
+transform: scale(1.05);
+}
+
+.navbar .activo{
+background: linear-gradient(to right, #5C2E7E, #9D4EDD);
+}
+
+.principal{
+display:flex;
+justify-content:center;
+align-items:center;
+height: calc(100vh - 75px);
+}
+
+.contenedor{
+background-color:white;
+padding:18px;
+border-radius:18px;
+width:360px;
+text-align:center;
+box-shadow:0px 4px 15px rgba(0,0,0,0.3);
+}
+
+h1{
+color:#5C2E7E;
+margin-bottom:12px;
+font-size:26px;
+}
+
+label{
+font-size:15px;
+font-weight:bold;
+color:#5C2E7E;
+}
+
+select,
+input{
+width:88%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+border-radius:10px;
+border:2px solid #9D4EDD;
+font-size:14px;
+}
+
+button{
+background: linear-gradient(to right, #5C2E7E, #9D4EDD);
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:12px;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#resultado{
+margin-top:12px;
+font-size:17px;
+font-weight:bold;
+color:#5C2E7E;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="navbar">
+
+<a href="problems.html">🏠 Inicio</a>
+<a href="Problema11.html">Problema 11</a>
+
+        <a href="Problema12.html">
+            Problema 12
+        </a>
+<a href="Problema13.html">Problema 13</a>
+
+<a href="Problema14.html">Problema 14</a>
+
+<a href="Problema15.html">Problema 15</a>
+
+<a href="Problema16.html">Problema 16</a>
+
+<a href="Problema17.html">Problema 17</a>
+
+<a href="Problema18.html">Problema 18</a>
+
+<a href="Problema19.html" class="activo">
+Problema 19
+</a>
+
+<a href="Problema20.html">Problema 20</a>
+<a href="Problema21.html">Problema 21</a>
+        <a href="Problema22.html">Problema 21</a>
+        <a href="Problema23.html">Problema 23</a>
+
+</div>
+
+<div class="principal">
+
+<div class="contenedor">
+
+<h1>Póliza de Seguro</h1>
+
+<label>Tipo de póliza:</label><br>
+
+<select id="poliza">
+
+<option value="A">
+Cobertura Amplia (A)
+</option>
+
+<option value="B">
+Daños a Terceros (B)
+</option>
+
+</select><br>
+
+<label>¿Consume alcohol?</label><br>
+
+<select id="alcohol">
+
+<option value="si">Sí</option>
+
+<option value="no">No</option>
+
+</select><br>
+
+<label>¿Usa lentes?</label><br>
+
+<select id="lentes">
+
+<option value="si">Sí</option>
+
+<option value="no">No</option>
+
+</select><br>
+
+<label>¿Tiene enfermedad?</label><br>
+
+<select id="enfermedad">
+
+<option value="si">Sí</option>
+
+<option value="no">No</option>
+
+</select><br>
+
+<label>Edad:</label><br>
+
+<input type="text" id="edad"><br>
+
+<button onclick="calcularPoliza()">
+Calcular Póliza
+</button>
+
+<p id="resultado"></p>
+
+</div>
+
+</div>
+
+<script src="19.js"></script>
+
+</body>
+</html>
